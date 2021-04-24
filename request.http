@@ -1,0 +1,57 @@
+ticketing.dev/api/users/currentuser
+
+###
+
+POST http://localhost:31842/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "POST"
+}
+
+###
+POST ticketing.dev/api/users/signup/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "test11@test.com",
+  "password": "password"
+}
+
+###
+POST ticketing.dev/api/tickets/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "concert",
+  "price": 11
+}
+
+###
+POST ticketing.dev/api/orders HTTP/1.1
+Content-Type: application/json
+
+{
+  "ticketId": "60836425f58fea001ad431c6"
+}
+
+###
+ticketing.dev/api/tickets/60690455eb378c001a8a4db6
+
+###
+PUT ticketing.dev/api/tickets/6080af829da38d001a8d0479 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "new concert",
+  "price": 25
+}
+
+###
+POST ticketing.dev/api/payments HTTP/1.1
+Content-Type: application/json
+
+{
+  "orderId": "60836430030063001cdd8e35",
+  "token": "tok_visa"
+}
